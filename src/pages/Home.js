@@ -113,71 +113,237 @@ export default function Home() {
           </ul>
         )}
       </motion.nav>
+      {/* ================= HERO SECTION ================= */}
+{/* ================= HERO SECTION ================= */}
+<motion.section
+  id="home"
+  style={{ y: heroY, opacity: heroOpacity }}
+  className="relative min-h-screen flex items-center bg-slate-950 overflow-hidden"
+>
+  {/* Background Image */}
+  <img
+    src="https://images.unsplash.com/photo-1581091870627-3c92d3a0f5b4"
+    alt="Industrial"
+    className="absolute inset-0 w-full h-full object-cover opacity-40"
+  />
 
-      {/* ================= HERO ================= */}
-      <section id="home" className="relative h-[520px] overflow-hidden">
-        <motion.img
-          style={{ y: heroY, opacity: heroOpacity }}
-          src="https://i.pinimg.com/736x/58/f2/cd/58f2cdaa351f461e24651d0b363d260a.jpg"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50"></div>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-slate-950/40"></div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="relative h-full flex flex-col justify-center items-center text-white text-center px-6"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Precision Bearing Solutions
-          </h1>
-          <p className="max-w-xl mb-6">
-            High-quality industrial bearings trusted worldwide.
-          </p>
+  {/* Content */}
+  <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+
+      {/* LEFT CONTENT */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        className="text-center md:text-left"
+      >
+        <h5 className="text-amber-400 font-semibold tracking-widest mb-4 text-sm sm:text-base">
+          WELCOME TO ABC BEARINGS
+        </h5>
+
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+          Precision Engineering <br />
+          <span className="text-amber-400">That Keeps You Moving</span>
+        </h1>
+
+        <p className="text-slate-300 max-w-xl mx-auto md:mx-0 mb-8 text-sm sm:text-base leading-relaxed">
+          We manufacture high-performance industrial bearings engineered
+          for durability, accuracy, and long service life across industries.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <a
             href="#products"
-            className="px-8 py-3 bg-yellow-400 text-slate-900 rounded-full font-semibold hover:bg-yellow-500"
+            className="px-8 py-3 bg-amber-500 text-slate-900 rounded-full font-semibold
+            hover:bg-amber-400 transition"
           >
-            Explore Products
+            View Products
           </a>
-        </motion.div>
-      </section>
 
-      {/* ================= SERVICES ================= */}
-      <motion.section
-        id="services"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        className="py-20"
+          <a
+            href="#contact"
+            className="px-8 py-3 border border-white/40 text-white rounded-full font-semibold
+            hover:bg-white hover:text-slate-900 transition"
+          >
+            Get Quote
+          </a>
+        </div>
+      </motion.div>
+
+      {/* RIGHT CARD (HIDDEN ON SMALL) */}
+      <motion.div
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.9 }}
+        className="hidden md:block"
       >
-        <motion.h2
-          variants={sectionVariant}
-          className="text-center text-3xl font-bold mb-12"
+        <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
+          <h4 className="text-white text-xl font-semibold mb-6">
+            Why Choose Us?
+          </h4>
+
+          <ul className="space-y-4">
+            {[
+              "ISO Certified Manufacturing",
+              "20+ Years Experience",
+              "Advanced CNC Machinery",
+              "Trusted Global Clients",
+            ].map((item, i) => (
+              <li key={i} className="flex items-center gap-3 text-slate-200">
+                <span className="w-2.5 h-2.5 bg-amber-400 rounded-full"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </motion.div>
+
+    </div>
+  </div>
+</motion.section>
+    
+
+      {/* ================= ABOUT COMPANY ================= */}
+      {/* ================= ABOUT SECTION ================= */}
+<motion.section
+  id="about"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ amount: 0.3 }}
+  className="py-20 sm:py-24 bg-white"
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-14 items-center">
+
+    {/* IMAGE */}
+    <motion.div
+      variants={sectionVariant}
+      className="relative mx-auto md:mx-0 max-w-md md:max-w-full"
+    >
+      <img
+        src="https://5.imimg.com/data5/SELLER/Default/2022/11/GV/VD/CN/13453853/untitled2-500x500.png"
+        alt="About ABC Bearings"
+        className="rounded-2xl shadow-2xl w-full"
+      />
+
+      <div className="absolute -bottom-5 -right-5 bg-amber-500 px-5 py-4 rounded-xl shadow-xl">
+        <h4 className="text-2xl font-bold text-slate-900">20+</h4>
+        <p className="text-sm font-medium text-slate-900">Years Experience</p>
+      </div>
+    </motion.div>
+
+    {/* CONTENT */}
+    <motion.div variants={sectionVariant} className="text-center md:text-left">
+      <h5 className="text-amber-500 font-semibold tracking-widest mb-3">
+        ABOUT COMPANY
+      </h5>
+
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
+        Engineering Excellence <br />
+        <span className="text-amber-500">Since Two Decades</span>
+      </h2>
+
+      <p className="text-slate-600 mb-5 text-sm sm:text-base leading-relaxed">
+        <strong>ABC Bearings Pvt. Ltd.</strong> is a trusted manufacturer of
+        precision industrial bearings, serving automotive, machinery,
+        textile, and power industries with unmatched quality.
+      </p>
+
+      <p className="text-slate-600 mb-6 text-sm sm:text-base leading-relaxed">
+        Our commitment to innovation, strict quality control, and customer
+        satisfaction makes us a preferred partner for businesses worldwide.
+      </p>
+
+      {/* FEATURES */}
+      <div className="grid sm:grid-cols-2 gap-4 mb-8 text-left">
+        {[
+          "ISO Certified Processes",
+          "Modern Manufacturing Facility",
+          "Expert Engineering Team",
+          "Global Quality Compliance",
+        ].map((item, i) => (
+          <div key={i} className="flex items-center gap-3">
+            <span className="w-3 h-3 bg-amber-500 rounded-full"></span>
+            <p className="text-slate-700 font-medium">{item}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* BUTTONS */}
+      <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <a
+          href="#services"
+          className="px-8 py-3 bg-slate-900 text-white rounded-full
+          hover:bg-amber-500 hover:text-slate-900 transition font-semibold"
         >
           Our Services
-        </motion.h2>
+        </a>
 
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-          {services.map((item, i) => (
-            <motion.div
-              key={i}
-              custom={i}
-              variants={cardVariant}
-              initial="hidden"
-              whileInView="visible"
-              whileHover={{ scale: 1.05, y: -10 }}
-              className="bg-white p-8 rounded-2xl shadow-lg text-center"
-            >
-              <img src={item.img} className="w-20 mx-auto mb-4" />
-              <h4 className="font-semibold text-lg">{item.title}</h4>
-              <p className="text-gray-600 mt-2">{item.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
+        <a
+          href="#contact"
+          className="px-8 py-3 border-2 border-slate-900 text-slate-900 rounded-full
+          hover:bg-slate-900 hover:text-white transition font-semibold"
+        >
+          Contact Us
+        </a>
+      </div>
+    </motion.div>
+  </div>
+</motion.section>
 
+      {/* ================= SERVICES ================= */}
+    <motion.section
+  id="services"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ amount: 0.3 }}
+  className="py-20 bg-slate-50"
+>
+  <motion.h2
+    variants={sectionVariant}
+    className="text-center text-3xl font-bold mb-12 text-slate-900"
+  >
+    Our Services
+  </motion.h2>
+
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+    {services.map((item, i) => (
+      <motion.div
+        key={i}
+        custom={i}
+        variants={cardVariant}
+        initial="hidden"
+        whileInView="visible"
+        whileHover={{ y: -12 }}
+        className="bg-white p-8 rounded-2xl shadow-xl border border-slate-200
+        hover:border-amber-400 transition-all duration-300 text-center flex flex-col"
+      >
+        <img src={item.img} className="w-20 mx-auto mb-4" alt={item.title} />
+
+        <h4 className="font-semibold text-lg text-slate-900 mb-2">
+          {item.title}
+        </h4>
+
+        <p className="text-slate-600 mb-6 flex-grow">
+          {item.desc}
+        </p>
+
+        {/* KNOW MORE BUTTON */}
+        <button
+          className="mx-auto px-6 py-2 border-2 border-slate-900 text-slate-900
+          rounded-full font-medium hover:bg-amber-500 hover:border-amber-500
+          hover:text-slate-900 transition-all duration-300"
+        >
+          Know More
+        </button>
+      </motion.div>
+    ))}
+  </div>
+</motion.section>
       {/* ================= PRODUCTS ================= */}
       <motion.section id="products" className="py-20 bg-gray-100">
         <motion.h2
