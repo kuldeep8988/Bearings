@@ -5,7 +5,7 @@ import "./Home.css";
 export default function Home() {
   return (
     <>
-      {/* ===== HEADER / NAVBAR ===== */}
+     
     {/* ===== HEADER / NAVBAR ===== */}
 <nav className="navbar">
   <div className="logo">
@@ -22,9 +22,10 @@ export default function Home() {
 
   <ul className="nav-links">
     <li><a href="#home">Home</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#contact">Contact Us</a></li>
-    <li><a href="#about">About Us</a></li>
+    <li><a href="#products">About</a></li>
+    <li><a href="#contact">Our Service</a></li>
+    <li><a href="#about">Our Product</a></li>
+     <li><a href="#about">Contact Us</a></li>
   </ul>
 </nav>
 
@@ -81,10 +82,121 @@ export default function Home() {
         </div>
       </div>
 
+      {/* ================= ABOUT COMPANY ================= */}
+<section id="about" className="about-section">
+  <div className="container">
+    <div className="row align-items-center">
+      
+      {/* Left Image */}
+      <div className="col-lg-6 mb-4 mb-lg-0">
+        <img
+          src="https://5.imimg.com/data5/SELLER/Default/2022/11/GV/VD/CN/13453853/untitled2-500x500.png"
+          alt="About Bearings Company"
+          className="about-img"
+        />
+      </div>
+
+      {/* Right Content */}
+      <div className="col-lg-6">
+        <h2 className="about-title">About Our Company</h2>
+        <p className="about-text">
+          ABC Bearings Pvt. Ltd. is a trusted name in the manufacturing and
+          supply of high-quality industrial bearings. With years of industry
+          experience, we deliver reliable, durable, and precision-engineered
+          bearing solutions.
+        </p>
+
+        <p className="about-text">
+          Our expertise spans across ball bearings, roller bearings, angular
+          contact bearings, and customized engineering solutions for diverse
+          industrial applications.
+        </p>
+
+        <ul className="about-points">
+          <li>✔ High-Quality Industrial Bearings</li>
+          <li>✔ Advanced Engineering Solutions</li>
+          <li>✔ Reliable After-Sales Support</li>
+          <li>✔ Trusted by Leading Industries</li>
+        </ul>
+
+        <button className="about-btn">Learn More</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+  {/* ================= ABOUT COMPANY ================= */}
+  {/* ================= OUR PRODUCTS ================= */}
+<section id="products" className="products-section">
+  <div className="container">
+    <div className="text-center mb-5">
+      <h2 className="products-title">Our Products</h2>
+      <p className="products-subtitle">
+        Precision-engineered bearings designed for performance, durability, and reliability.
+      </p>
+    </div>
+
+    <div className="row g-4">
+      {/* Product 1 */}
+      <div className="col-lg-3 col-md-6">
+        <div className="product-card">
+          <img
+            src="https://5.imimg.com/data5/SELLER/Default/2022/11/GV/VD/CN/13453853/untitled2-500x500.png"
+            alt="Ball Bearings"
+          />
+          <h5>Ball Bearings</h5>
+          <p>High-speed and low-friction bearings for industrial applications.</p>
+          <button className="product-btn">View Details</button>
+        </div>
+      </div>
+
+      {/* Product 2 */}
+      <div className="col-lg-3 col-md-6">
+        <div className="product-card">
+          <img
+            src="https://tiimg.tistatic.com/fp/1/002/264/20mmx52mmx22-2mm-angular-contact-ball-bearing-for-sliding-contact-bearing-829.jpg"
+            alt="Roller Bearings"
+          />
+          <h5>Roller Bearings</h5>
+          <p>Designed to handle heavy radial and axial loads efficiently.</p>
+          <button className="product-btn">View Details</button>
+        </div>
+      </div>
+
+      {/* Product 3 */}
+      <div className="col-lg-3 col-md-6">
+        <div className="product-card">
+          <img
+            src="https://i.pinimg.com/736x/58/f2/cd/58f2cdaa351f461e24651d0b363d260a.jpg"
+            alt="Angular Bearings"
+          />
+          <h5>Angular Contact Bearings</h5>
+          <p>Ideal for applications requiring high precision and speed.</p>
+          <button className="product-btn">View Details</button>
+        </div>
+      </div>
+
+      {/* Product 4 */}
+      <div className="col-lg-3 col-md-6">
+        <div className="product-card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0tJpDJZ6b3xg-r4Cgr8ivchC6cF_Da9xvXQ&s"
+            alt="Thrust Bearings"
+          />
+          <h5>Thrust Bearings</h5>
+          <p>Engineered to support axial loads with maximum efficiency.</p>
+          <button className="product-btn">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
       {/* ================= SKILLS / SERVICES ================= */}
       <div className="container skills-section">
         <div className="text-center mb-5">
-          <h2 className="skills-title">We focus on our skills.</h2>
+          <h2 className="skills-title">We focus on our Service.</h2>
           <p className="skills-subtitle">
             WE KNOW OUR CORE STRENGTHS, STICK TO OUR GUNS AND HONE OUR SKILLS.
           </p>
