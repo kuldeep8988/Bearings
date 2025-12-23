@@ -9,7 +9,7 @@ export default function Home() {
     {/* ===== HEADER / NAVBAR ===== */}
 <nav className="navbar">
   <div className="logo">
-    <span>Bearings</span>
+      <img src="b9e1e036-8341-4d0b-8ece-857476116814.jpeg"></img>
   </div>
 
   {/* Hamburger */}
@@ -20,13 +20,13 @@ export default function Home() {
     <span></span>
   </label>
 
-  <ul className="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#products">About</a></li>
-    <li><a href="#contact">Our Service</a></li>
-    <li><a href="#about">Our Product</a></li>
-     <li><a href="#about">Contact Us</a></li>
-  </ul>
+<ul className="nav-links">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#SERVICES">Our Service</a></li>
+  <li><a href="#products">Our Product</a></li>
+  <li><a href="#contacts">Contact Us</a></li>
+</ul>
 </nav>
 
 
@@ -125,6 +125,42 @@ export default function Home() {
     </div>
   </div>
 </section>
+ {/* ================= SKILLS / SERVICES ================= */}
+      <div className="container skills-section" id="SERVICES">
+        <div className="text-center mb-5">
+          <h2 className="skills-title">We focus on our Service.</h2>
+          <p className="skills-subtitle">
+            WE KNOW OUR CORE STRENGTHS, STICK TO OUR GUNS AND HONE OUR SKILLS.
+          </p>
+        </div>
+
+        <div className="row g-4">
+          <div className="col-md-4">
+            <div className="skills-card">
+              <img src="https://www.pitsongears.com/wp-content/uploads/2019/11/gear-vector-icon-7.jpg" className="skills-img" />
+              <h4 className="skills-card-title">Products</h4>
+              <button className="skills-btn">Know More</button>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="skills-card">
+              <img src="https://cdn-icons-png.flaticon.com/512/1048/1048946.png" className="skills-img" />
+              <h4 className="skills-card-title">Custom Engineering & Retrofit</h4>
+              <button className="skills-btn">Know More</button>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="skills-card">
+              <img src="https://www.pitsongears.com/wp-content/uploads/2016/08/sers-1.png" className="skills-img" />
+              <h4 className="skills-card-title">Service & Repair</h4>
+              <button className="skills-btn">Know More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
   {/* ================= ABOUT COMPANY ================= */}
   {/* ================= OUR PRODUCTS ================= */}
 <section id="products" className="products-section">
@@ -193,42 +229,7 @@ export default function Home() {
 </section>
 
 
-      {/* ================= SKILLS / SERVICES ================= */}
-      <div className="container skills-section">
-        <div className="text-center mb-5">
-          <h2 className="skills-title">We focus on our Service.</h2>
-          <p className="skills-subtitle">
-            WE KNOW OUR CORE STRENGTHS, STICK TO OUR GUNS AND HONE OUR SKILLS.
-          </p>
-        </div>
-
-        <div className="row g-4">
-          <div className="col-md-4">
-            <div className="skills-card">
-              <img src="https://www.pitsongears.com/wp-content/uploads/2019/11/gear-vector-icon-7.jpg" className="skills-img" />
-              <h4 className="skills-card-title">Products</h4>
-              <button className="skills-btn">Know More</button>
-            </div>
-          </div>
-
-          <div className="col-md-4">
-            <div className="skills-card">
-              <img src="https://cdn-icons-png.flaticon.com/512/1048/1048946.png" className="skills-img" />
-              <h4 className="skills-card-title">Custom Engineering & Retrofit</h4>
-              <button className="skills-btn">Know More</button>
-            </div>
-          </div>
-
-          <div className="col-md-4">
-            <div className="skills-card">
-              <img src="https://www.pitsongears.com/wp-content/uploads/2016/08/sers-1.png" className="skills-img" />
-              <h4 className="skills-card-title">Service & Repair</h4>
-              <button className="skills-btn">Know More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-        <footer className="footer">
+             <footer className="footer" id="contacts">
       <div className="container">
         <div className="row">
 
