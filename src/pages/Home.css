@@ -1,0 +1,256 @@
+
+/* ===== Navbar ===== */
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0b2c4d;
+  padding: 14px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo span {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ff9800;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* ===== HAMBURGER ===== */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  background: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #0b2c4d;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav-links li {
+    padding: 15px 0;
+  }
+
+  /* Toggle menu */
+  #menu-toggle:checked ~ .nav-links {
+    max-height: 300px;
+  }
+}
+
+
+/* ================= CAROUSEL ================= */
+
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 250px;
+  }
+}
+
+/* ================= SKILLS SECTION ================= */
+.skills-section {
+  padding: 60px 0;
+}
+
+/* Title */
+.skills-title {
+  font-weight: 600;
+}
+
+.skills-subtitle {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #000;
+  margin-top: 5px;
+}
+
+/* Card */
+.skills-card {
+  border: 2px solid #2b2b2b;
+  padding: 40px 20px;
+  text-align: center;
+  background: #fff;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.skills-img {
+  width: 200px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 25px;
+}
+
+/* Title */
+.skills-card-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.skills-btn {
+  padding: 8px 22px;
+  border: 2px solid #000;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skills-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .skills-card {
+    padding: 30px 15px;
+  }
+}
+
+.footer {
+  background-color: #111;
+  color: #ddd;
+  padding: 50px 0 20px;
+  margin-top: 60px;
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-links li:hover {
+  color: #fff;
+}
+
+/* Social Icons */
+.footer-social {
+  margin-top: 15px;
+}
+
+.footer-social i {
+  font-size: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-social i:hover {
+  color: #fff;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
